@@ -1,18 +1,29 @@
 package conta;
 
 import java.util.Scanner;
-import conta.model.*;
+
 import conta.util.Cores;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 	public static void main(String[] args) {
 		
-		ModelConta c1 = new ModelConta(1, 123, 1, "Adriana", 10000.0f);
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1.visualizar();
-		c1.depositar(5000.0f);
-		c1.visualizar();
+		//teste classe conta corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 124, 1, "Mariana", 15000.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		//teste conta poupanca
+		ContaPoupanca cp1 = new ContaPoupanca(3, 120, 2, "Victor", 100000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(50000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 
@@ -21,7 +32,7 @@ public class Menu {
 		while(true) {
 
 			System.out.println(Cores.TEXT_BLUE_BRIGHT + Cores.ANSI_BLACK_BACKGROUND
-					+ "*****************************************************");
+					+       "\n\n*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                       WILLBANK                      ");
 			System.out.println("                                                     ");
